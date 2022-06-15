@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid black; */
+}
+
+body {
+  background-color: #153540;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 600px;
+  height: 100vw;
+  max-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.moldura {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container button {
+  position: absolute;
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10%;
+}
+
+#prev {
+  left: 1%;
+}
+
+#next {
+  right: 1%
+}
+
+.picture-container {
+  width: 90%;
+  height: 90%;
+  border-radius: 2%;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.slider-image {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.active {
+  display: block;
+}
+
+@keyframes forward-out {
+  from {left: 0}
+  to {left: -110%}
+}
+
+@keyframes forward-in {
+  from {left: 110% }
+  to {left: 0}
+}
+
+@keyframes backward-out {
+  from {left: 0}
+  to {left: 110%}
+}
+
+@keyframes backward-in {
+  from {left: -110%}
+  to {left: 0}
+}
